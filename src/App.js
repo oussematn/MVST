@@ -3,7 +3,7 @@ import Repos from './components/Repos'
 
 function App() {
   return (
-    <div className="App md:container mx-auto p-4">
+    <div className="App lg:container mx-auto p-4 md:grid md:grid-cols-30-70 gap-8">
       <Profile></Profile>
       <Repos></Repos>
     </div>
