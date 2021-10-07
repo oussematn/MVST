@@ -61,7 +61,7 @@ function App() {
   }
 
   return (
-    <div className="App lg:container mx-auto p-4 md:grid md:grid-cols-30-70 gap-8">
+    <div className="App lg:container mx-auto p-4 md:grid md:grid-cols-30-70 gap-8" data-testid='app'>
       <Profile user={user} orgs={orgs}></Profile>
       <Repos repos={repos}></Repos>
     </div>
