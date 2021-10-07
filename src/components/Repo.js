@@ -1,17 +1,19 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faCodeBranch, faLanguage, faStar } from "@fortawesome/free-solid-svg-icons"
+import ReactTimeAgo from 'react-time-ago'
 
-function Repo() {
+function Repo(props) {
     return (
         <div>
             <button className="bg-gray-100 border-2 border-blue-400 rounded-lg font-semibold py-1 px-3 mt-4 float-right"><FontAwesomeIcon icon={faStar} color="gray" /> Star</button>
-            <p className="font-bold text-2xl text-blue-400">Chatty</p>
-            <p className="w-4/5 mt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis, saepe Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam fugiat laborum reprehenderit, laudantium enim amet autem? Nesciunt saepe provident hic. ?</p>
-            <div className="flex gap-2 py-2">
-                <p>TypeScript</p>
-                <p>125</p>
-                <p>MIT License</p>
-                <p>Updated 5 days ago</p>
+            <p className="font-bold text-2xl text-blue-400">{props.name}</p>
+            {props.description ?
+                <p className="w-4/5 mt-2">{props.description}</p>
+                : ''}
+            <div className="pt-4">
+                <span className="mr-6"><FontAwesomeIcon icon={faLanguage} color="gray" /> {props.language}</span>
+                <span className="mr-6"><FontAwesomeIcon icon={faCodeBranch} color="gray" /> {props.forks}</span>
+                <span>Updated <ReactTimeAgo date={props.updated_at} /></span>
             </div>
             <hr className="my-4 border-t-1" />
         </div>

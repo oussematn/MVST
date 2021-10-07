@@ -1,6 +1,6 @@
 import Repo from "./Repo"
 
-function Repos() {
+function Repos({ repos }) {
     return (
         <div className="mt-8 md:mt-0">
             <div>
@@ -8,11 +8,9 @@ function Repos() {
             </div>
             <hr className="my-4 border-t-2" />
             <div>
-                <Repo />
-                <Repo />
-                <Repo />
-                <Repo />
-                <Repo />
+                {repos.map(repo => {
+                    return <Repo {...repo} />
+                })}
             </div>
         </div>
     )
