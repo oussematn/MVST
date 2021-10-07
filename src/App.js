@@ -3,6 +3,8 @@ import Profile from './components/Profile'
 import Repos from './components/Repos'
 
 function App() {
+  const url = new URL(window.location.href);
+  const username = url.searchParams.get('username') ? url.searchParams.get('username') : 'oussematn';
   const [user, setUser] = useState([])
   const [orgs, setOrgs] = useState([])
   const [repos, setRepos] = useState([])
@@ -29,21 +31,21 @@ function App() {
 
   // Get user data
   const fetchUser = async () => {
-    const res = await fetch(' https://api.github.com/users/oussematn')
+    const res = await fetch(` https://api.github.com/users/${username}`)
     const data = await res.json()
     return data
   }
 
   // Get user organizations
   const fetchOrgs = async () => {
-    const res = await fetch(' https://api.github.com/users/oussematn/orgs')
+    const res = await fetch(` https://api.github.com/users/${username}/orgs`)
     const data = await res.json()
     return data
   }
 
   // Get user repos
   const fetchRepos = async () => {
-    const res = await fetch(' https://api.github.com/users/oussematn/repos')
+    const res = await fetch(` https://api.github.com/users/${username}/repos`)
     const data = await res.json()
     return data
   }

@@ -15,7 +15,7 @@ const Profile = ({ user, orgs }) => {
             </div>
             <button className="bg-gray-100 w-full border-2 border-blue-400 rounded-lg font-semibold py-1 mt-4">Follow</button>
             <div className="mt-4 text-gray-700">
-                <FontAwesomeIcon icon={faUser} /> <span className="font-bold">{user.followers}</span> followers  - <span className="font-bold">{user.following}</span> following - <FontAwesomeIcon icon={faStar} /> <span className="font-bold">2</span>
+                <FontAwesomeIcon icon={faUser} /> <span className="font-bold">{user.followers}</span> followers  - <span className="font-bold">{user.following}</span> following - <FontAwesomeIcon icon={faStar} /> <span className="font-bold">{user.public_repos}</span>
             </div>
             <div className="mt-6 mb-4 text-gray-700">
                 {user.location ? <p> <FontAwesomeIcon icon={faMapMarkedAlt} /> {user.location}</p> : ''}
