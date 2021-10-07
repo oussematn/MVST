@@ -12,6 +12,9 @@ http://localhost:3000?username=torvalds
 ## Available Scripts
 
 In the project directory, you can run:
+### `yarn install`
+
+Installs the needed dependencies
 
 ### `yarn start`
 
@@ -33,3 +36,15 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+## Future Improvements
+This simple app has a large room for improvement, we can for instance:
+1. Make it more easy to change the fetched user and provide an error in case the user doesn't exist.
+2. Add pagination for the repositories list.
+3. Add more filters for the search such as per date filtering.
+4. Add dark theme option.
+6. ...
+
+## Feedback
+I liked the exercice overall since it's clear and tests many frontend development skills such as creating a nie UI, responsivness, consuming an API and more.
+In the other hand and since the position is FulStack development, this exercice doesn't cover Backend development for example but I understand that in that case the exercice can be longer.

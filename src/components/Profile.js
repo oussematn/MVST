@@ -43,7 +43,7 @@ const Profile = ({ user, orgs }) => {
 
 // Making sure we have the props needed
 Profile.propTypes = {
-    user: PropTypes.object.isRequired,
+    user: PropTypes.array.isRequired,
     orgs: PropTypes.array.isRequired
 }
 
