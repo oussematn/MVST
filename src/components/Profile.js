@@ -1,4 +1,4 @@
-//import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faMapMarkedAlt, faStar, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
@@ -41,8 +41,10 @@ const Profile = ({ user, orgs }) => {
     )
 }
 
-/* Profile.propTypes = {
-    user: PropTypes.object,
-    orgs: PropTypes.array
-} */
+// Making sure we have the props needed
+Profile.propTypes = {
+    user: PropTypes.object.isRequired,
+    orgs: PropTypes.array.isRequired
+}
+
 export default Profile

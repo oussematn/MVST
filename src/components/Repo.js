@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCodeBranch, faLanguage, faStar } from "@fortawesome/free-solid-svg-icons"
 import ReactTimeAgo from 'react-time-ago'
@@ -21,6 +22,9 @@ function Repo(props) {
     )
 }
 
+// Making sure we have the props needed
+Repo.propTypes = {
+    props: PropTypes.object.isRequired,
+}
 
 export default Repo
-

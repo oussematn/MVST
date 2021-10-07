@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { useState } from "react";
 import Repo from "./Repo"
 
@@ -23,6 +24,11 @@ function Repos({ repos }) {
         </div>
     )
 
+}
+
+// Making sure we have the props needed
+Repos.propTypes = {
+    repos: PropTypes.array.isRequired
 }
 
 export default Repos
