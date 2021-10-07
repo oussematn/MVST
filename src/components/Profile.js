@@ -2,9 +2,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faMapMarkedAlt, faStar, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
+/** The component having user info */
 const Profile = ({ user, orgs }) => {
     return (
         <div>
+            {/* Listing user basic info */}
             <div className="flex md:block">
                 <img src={user.avatar_url} alt="avatar" className="border-4 border-blue-400 rounded-full max-h-48 md:max-h-80" />
                 <div className="pl-4 md:pl-0">
@@ -23,6 +25,7 @@ const Profile = ({ user, orgs }) => {
                 {user.twitter_username ? <p><FontAwesomeIcon icon={faTwitter} /> {user.twitter_username}</p> : ''}
             </div>
             <hr />
+            {/* Listing user organizations if he has any */}
             {orgs.length !== 0 ?
                 <div>
                     <p className="font-bold text-lg mt-4">Organizations</p>

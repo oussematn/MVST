@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Repo from "./Repo"
 
+/** The user repositories list */
 function Repos({ repos }) {
+    /** The 'Find a repository' input value */
     const [searchValue, setSearchValue] = useState('');
     return (
         <div className="mt-8 md:mt-0">
@@ -11,7 +13,8 @@ function Repos({ repos }) {
             <hr className="my-4 border-t-2" />
             <div>
                 {repos.map(repo => {
-                    if (repo.name.toLowerCase().includes(searchValue.toLowerCase()) || searchValue == '') {
+                    // Listing only the repos having the search string in the title
+                    if (repo.name.toLowerCase().includes(searchValue.toLowerCase()) || searchValue === '') {
                         return <Repo {...repo} key={repo.id} />
                     }
                 })}
