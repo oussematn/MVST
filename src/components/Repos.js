@@ -17,6 +17,7 @@ function Repos({ repos }) {
                     if (repo.name.toLowerCase().includes(searchValue.toLowerCase()) || searchValue === '') {
                         return <Repo {...repo} key={repo.id} />
                     }
+                    return <span></span>
                 })}
             </div>
         </div>
