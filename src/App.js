@@ -45,7 +45,6 @@ function App() {
   const fetchRepos = async () => {
     const res = await fetch(' https://api.github.com/users/oussematn/repos')
     const data = await res.json()
-    console.log(data);
     return data
   }
 
