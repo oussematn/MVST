@@ -37,7 +37,7 @@ function App() {
     getUser()
     getOrgs()
     getRepos()
-  })
+  }, [])
 
   // Get user data from the GitHub API
   const fetchUser = async () => {
